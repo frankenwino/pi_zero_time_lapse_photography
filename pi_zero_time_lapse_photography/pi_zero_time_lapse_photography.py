@@ -88,12 +88,6 @@ def scp_image_to_recipient(image_path):
                     current_date_time(), type(e), str(e))
                 )
 
-
-def main():
-    take_a_picture(image_path=local_image_path)
-    take_a_picture(image_path=web_image_path)
-    scp_image_to_recipient(image_path=local_image_path)
-
 camera = PiCamera()
 camera.resolution = (1280, 720)
 
@@ -113,4 +107,6 @@ if __name__ == "__main__":
     if not os.path.isdir(local_image_dir):
         os.makedirs(local_image_dir)
 
-    main()
+    take_a_picture(image_path=local_image_path)
+    take_a_picture(image_path=web_image_path)
+    scp_image_to_recipient(image_path=local_image_path)
