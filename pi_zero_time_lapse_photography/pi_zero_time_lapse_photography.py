@@ -4,7 +4,8 @@
 Takes two pictures.
 - One is saved to /var/www/index/ so you can view it in a browser at:
     http://<hostname>/web_image.png
-- The other in saved locally, then can be SCPed to a remote mahine.
+- The other in saved locally, then SCPed to a remote machine. The local file is
+  deleted to save space/avoid filling up the hard drive on the Raspberry Pi.
 
 Notes:
 - Install apache2:
