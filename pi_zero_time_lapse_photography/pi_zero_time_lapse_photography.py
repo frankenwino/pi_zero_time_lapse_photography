@@ -51,7 +51,7 @@ def take_a_picture(image_path):
     return image_path
 
 
-def ssh_image_to_recipient(image_path):
+def scp_image_to_recipient(image_path):
     hostname = "ENTER RECIPIENT MACHINE'S HOSTNAME HERE"
     username = "ENTER RECIPIENT MACHINE'S USERNAME HERE"
     password = "ENTER RECIPIENT MACHINE'S PASSWORD HERE"
@@ -91,7 +91,7 @@ def ssh_image_to_recipient(image_path):
 def main():
     take_a_picture(image_path=local_image_path)
     take_a_picture(image_path=web_image_path)
-    ssh_image_to_recipient(image_path=local_image_path)
+    scp_image_to_recipient(image_path=local_image_path)
 
 camera = PiCamera()
 camera.resolution = (1280, 720)
